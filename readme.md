@@ -103,4 +103,4 @@ private Map<String, Session> getSessionsContainer() {
 	}
 ```
 
-5、其他类中，没有代码的优化，更换线程安全的容器，添加泛型等。
+5、其他类中，部分代码的优化，更换线程安全的容器，添加泛型等。
