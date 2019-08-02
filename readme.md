@@ -1,6 +1,6 @@
 ### pushletExtend
 
-  是基于pushlet的扩展，支持向指定的session发送消息。扩展支持集群等
+  是基于pushlet的扩展，支持向指定的session发送消息。
 
 
 
@@ -74,7 +74,7 @@ doRequest() 方法中
 private Map<String, Session> sessions = null;
 private Map<String, Session> getSessionsContainer() {
 
-	//可以放入redis 或 ehcache..等缓存中，支持集群等...
+	//可以放入redis 或 ehcache..等缓存中，
 	
 	//直接放在内存中
 	if (sessions == null) {
@@ -92,7 +92,7 @@ private Map<String, Session> getSessionsContainer() {
   private Map<String, List<String>> continer;
 
 	private Map<String, List<String>> getSessionContiner() {
-		//可以放入redis 或 ehcache..等缓存中，支持集群等...
+		//可以放入redis 或 ehcache..等缓存中，
 		
 		//直接放在内存中
 		if (continer == null) {
