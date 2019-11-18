@@ -3,6 +3,8 @@
 
 package com.mustr.pushlet.core;
 
+import java.io.Serializable;
+
 import com.mustr.pushlet.util.Log;
 import com.mustr.pushlet.util.PushletException;
 
@@ -12,8 +14,10 @@ import com.mustr.pushlet.util.PushletException;
  * @author Just van den Broecke - Just Objects &copy;
  * @version $Id: Session.java,v 1.8 2007/11/23 14:33:07 justb Exp $
  */
-public class Session implements Protocol, ConfigDefs {
-	private Controller controller;
+public class Session implements Protocol, ConfigDefs, Serializable {
+    
+    private static final long serialVersionUID = -6427728335185021472L;
+    private Controller controller;
 	private Subscriber subscriber;
 
 	private String userAgent;

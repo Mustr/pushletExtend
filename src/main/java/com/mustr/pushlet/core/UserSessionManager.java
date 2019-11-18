@@ -43,6 +43,8 @@ public class UserSessionManager {
         } else {
             list.add(sessionId);
         }
+        
+        //如果是放入第三方缓存，这里需要重新放入缓存
     }
     
     public List<String> getUserSessionIds(String jsessionid) {
@@ -67,5 +69,6 @@ public class UserSessionManager {
                 break;
             }
         }
+      //如果是放入第三方缓存，这里需要重新放入缓存
     }
 }

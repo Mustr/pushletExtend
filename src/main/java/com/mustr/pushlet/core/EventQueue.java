@@ -3,6 +3,8 @@
 
 package com.mustr.pushlet.core;
 
+import java.io.Serializable;
+
 /**
  * FIFO queue with guarded suspension.
  * <b>Purpose</b><br>
@@ -19,8 +21,9 @@ package com.mustr.pushlet.core;
  * @author Just van den Broecke - Just Objects &copy;
  * @version $Id: EventQueue.java,v 1.3 2007/11/23 14:33:07 justb Exp $
  */
-public class EventQueue {
-	/**
+public class EventQueue implements Serializable {
+    private static final long serialVersionUID = 5961249001805662555L;
+    /**
 	 * Defines maximum queue size
 	 */
 	private int capacity = 8;

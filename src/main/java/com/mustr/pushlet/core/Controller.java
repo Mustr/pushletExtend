@@ -4,7 +4,7 @@
 package com.mustr.pushlet.core;
 
 import java.io.IOException;
-import java.net.URLEncoder;
+import java.io.Serializable;
 
 import com.mustr.pushlet.util.PushletException;
 
@@ -14,9 +14,10 @@ import com.mustr.pushlet.util.PushletException;
  * @author Just van den Broecke - Just Objects &copy;
  * @version $Id: Controller.java,v 1.9 2007/11/23 14:33:07 justb Exp $
  */
-public class Controller implements Protocol, ConfigDefs {
+public class Controller implements Protocol, ConfigDefs, Serializable {
 
-	private Session session;
+    private static final long serialVersionUID = -7806194467424381891L;
+    private Session session;
 
 	/**
 	 * Protected constructor as we create through factory method.

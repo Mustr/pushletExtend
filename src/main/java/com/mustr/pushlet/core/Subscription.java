@@ -3,6 +3,8 @@
 
 package com.mustr.pushlet.core;
 
+import java.io.Serializable;
+
 import com.mustr.pushlet.util.Rand;
 import com.mustr.pushlet.util.PushletException;
 
@@ -13,8 +15,10 @@ import com.mustr.pushlet.util.PushletException;
  * @author Just van den Broecke - Just Objects &copy;
  * @version $Id: Subscription.java,v 1.5 2007/11/23 14:33:07 justb Exp $
  */
-public class Subscription implements ConfigDefs {
-	public static final int ID_SIZE = 5;
+public class Subscription implements ConfigDefs, Serializable {
+    private static final long serialVersionUID = -726444505820305840L;
+    
+    public static final int ID_SIZE = 5;
 	public static final String SUBJECT_SEPARATOR = ",";
 	private String id = Rand.randomName(ID_SIZE);
 	private String subject;

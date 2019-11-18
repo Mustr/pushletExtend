@@ -7,6 +7,7 @@ import com.mustr.pushlet.util.PushletException;
 import com.mustr.pushlet.util.Rand;
 import com.mustr.pushlet.util.Sys;
 
+import java.io.Serializable;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -16,8 +17,10 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author Just van den Broecke - Just Objects &copy;
  * @version $Id: Subscriber.java,v 1.26 2007/11/23 14:33:07 justb Exp $
  */
-public class Subscriber implements Protocol, ConfigDefs {
-	private Session session;
+public class Subscriber implements Protocol, ConfigDefs, Serializable {
+    private static final long serialVersionUID = -2236781601053413059L;
+
+    private Session session;
 
 	/**
 	 * Blocking queue.

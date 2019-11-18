@@ -202,6 +202,9 @@ public class SessionManager implements ConfigDefs {
 	public void addSession(Session session) {
 	    getSessionsContainer().put(session.getId(), session);
 		sessionCacheDirty = true;
+		
+		//如果是放入第三方缓存中，这里需要重新放入缓存
+		
 		info(session.getId() + " at " + session.getAddress() + " added ");
 	}
 
@@ -215,6 +218,9 @@ public class SessionManager implements ConfigDefs {
             info(session.getId() + " at " + session.getAddress() + " removed ");
         }
         sessionCacheDirty = true;
+        
+        //如果是放入第三方缓存中，这里需要重新放入缓存
+        
         return session;
 	}
 
@@ -240,6 +246,9 @@ public class SessionManager implements ConfigDefs {
 			timer = null;
 		}
 		sessions.clear();
+		
+		//如果是放入第三方缓存中，这里需要清除缓存
+		
 		info("stopped");
 	}
 
